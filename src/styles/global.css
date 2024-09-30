@@ -1,0 +1,12 @@
+body, input, select, button {
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  .dashboard, .leaderboard, .api-keys {
+    color: white;
+  }
+  
+  table {
+    color: black;
+  }

@@ -1,0 +1,38 @@
+.sidebar {
+    width: 250px;
+    background-color: #f0f2f5;
+    padding: 2rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-info {
+    margin-bottom: 2rem;
+  }
+  
+  .user-info h2 {
+    color: #1a73e8;
+    margin-bottom: 0.5rem;
+  }
+  
+  .user-info p {
+    color: #5f6368;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-bottom: 1rem;
+  }
+  
+  nav ul li a {
+    color: #3c4043;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #1a73e8;
+  }

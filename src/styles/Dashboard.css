@@ -1,0 +1,60 @@
+.dashboard {
+  flex-grow: 1;
+  padding: 2rem;
+  background-color: #fff;
+  color: black;
+  overflow-y: auto;
+}
+
+.dashboard h1 {
+  color: #1a73e8;
+  margin-bottom: 1rem;
+}
+
+.dashboard-nav {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.dashboard-nav button {
+  background-color: #f0f2f5;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  color: black;
+}
+
+.dashboard-nav button.active {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  background-color: #f0f2f5;
+  border-radius: 8px;
+  padding: 1rem;
+  width: calc(50% - 0.5rem);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.card h2 {
+  color: #3c4043;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: black;
+}
+
+.card.full-width {
+  width: 100%;
+}
