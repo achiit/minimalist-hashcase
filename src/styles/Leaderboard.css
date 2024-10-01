@@ -1,41 +1,47 @@
 .leaderboard {
-    width: 100%;
-    color: black;
-  }
-  
-  .period-selector {
-    margin-bottom: 1rem;
-  }
-  
-  .period-selector select {
-    margin-left: 0.5rem;
-    padding: 0.25rem;
-    color: white;
-  }
-  
-  .leaderboard table {
-    width: 100%;
-    border-collapse: collapse;
-    color: black;
-  }
-  
-  .leaderboard th, .leaderboard td {
-    border: 1px solid #ddd;
-    padding: 0.5rem;
-    text-align: left;
-  }
-  
-  .leaderboard th {
-    background-color: #f0f2f5;
-    font-weight: bold;
-    color: black;
-  }
-  
-  .leaderboard tr:nth-child(even) {
-    background-color: #f8f9fa;
-  }
-  
-  .error {
-    color: red;
-    margin-top: 10px;
-  }
+  width: 100%;
+  color: black;
+}
+
+.period-selector {
+  margin-bottom: 1rem;
+}
+
+.period-selector label {
+  color: black;
+  margin-right: 0.5rem;
+}
+
+.period-selector select {
+  padding: 0.25rem;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+}
+
+.leaderboard table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.leaderboard th, .leaderboard td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.leaderboard th {
+  background-color: #f0f2f5;
+  font-weight: bold;
+}
+
+.leaderboard tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}

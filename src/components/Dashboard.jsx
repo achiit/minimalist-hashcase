@@ -16,10 +16,10 @@ function Dashboard() {
       case 'overview':
         return (
           <>
-            <div className="card">
+            {/* <div className="card">
               <h2>Company</h2>
               <p>{user.company_name}</p>
-            </div>
+            </div> */}
             <div className="card">
               <h2>Account Created</h2>
               <p>{new Date(user.createdAt).toLocaleDateString()}</p>
@@ -73,35 +73,38 @@ function Dashboard() {
 
   return (
     <div className="dashboard">
-      <h1>Welcome, {user.name}!</h1>
-      <div className="dashboard-nav">
-        <button 
-          className={activeSection === 'overview' ? 'active' : ''} 
-          onClick={handleSectionChange('overview')}
-        >
-          Overview
-        </button>
-        <button 
-          className={activeSection === 'users' ? 'active' : ''} 
-          onClick={handleSectionChange('users')}
-        >
-          Users
-        </button>
+      <header className="dashboard-header">
+        {/* <h1>Dashboard</h1> */}
+        <span>Welcome, {user.name}</span>
+      </header>
+      <div className="dashboard-content">
+        <nav className="dashboard-nav">
+          <button 
+            className={activeSection === 'overview' ? 'active' : ''} 
+            onClick={handleSectionChange('overview')}
+          >
+            Overview
+          </button>
+          <button 
+            className={activeSection === 'users' ? 'active' : ''} 
+            onClick={handleSectionChange('users')}
+          >
+            Users
+          </button>
+        </nav>
+        {isVerifyingApiKey ? (
+          <div className="api-key-verification card">
+            <h2>Enter your Dev API Key</h2>
+            <form onSubmit={handleApiKeySubmit}>
+              <input type="text" name="apiKey" required placeholder="Enter your API key" />
+              <button type="submit">Verify</button>
+            </form>
+            {apiKeyError && <p className="error">{apiKeyError}</p>}
+          </div>
+        ) : (
+          renderSection()
+        )}
       </div>
-      {isVerifyingApiKey ? (
-        <div className="api-key-verification">
-          <h2>Enter your Dev API Key</h2>
-          <form onSubmit={handleApiKeySubmit}>
-            <input type="text" name="apiKey" required />
-            <button type="submit">Verify</button>
-          </form>
-          {apiKeyError && <p className="error">{apiKeyError}</p>}
-        </div>
-      ) : (
-        <div className="dashboard-content">
-          {renderSection()}
-        </div>
-      )}
     </div>
   );
 }

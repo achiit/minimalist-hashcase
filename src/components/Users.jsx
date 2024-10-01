@@ -81,7 +81,7 @@ function Users() {
     setLoyaltyValues(prev => ({ ...prev, [`${userId}-${code}`]: value }));
   };
 
-  if (isLoading) return <div>Loading users data...</div>;
+  if (isLoading) return <div className="loading">Loading users data...</div>;
   if (error) return <div className="error">{error}</div>;
 
   return (
@@ -112,7 +112,10 @@ function Users() {
                   <td>{typeof user.points === 'number' ? user.points.toFixed(2) : user.points}</td>
                   <td>{user.streak}</td>
                   <td>
-                    <button onClick={() => document.getElementById(`actions-${user.id}`).classList.toggle('hidden')}>
+                    <button 
+                      className="toggle-actions"
+                      onClick={() => document.getElementById(`actions-${user.id}`).classList.toggle('hidden')}
+                    >
                       Toggle Actions
                     </button>
                   </td>
