@@ -4,7 +4,7 @@ import { loginUser } from '../services/api';
 import '../styles/LoginForm.css';
 
 function LoginForm() {
-  const [email, setEmail] = useState('minimalist@hashcase.com');
+  const [email, setEmail] = useState('minimalist@hashcase.co');
   const [password, setPassword] = useState('123456789');
   const navigate = useNavigate();
 
